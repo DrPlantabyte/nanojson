@@ -11,7 +11,7 @@ nanojson is dual-licensed under the MIT and Apache Public License.
 
   * Build: `mvn clean compile test jar:jar`
   * Javadocs: `mvn javadoc:javadoc && open target/site/apidocs/index.html`
- 
+
 Add it to your maven pom.xml:
 
     <dependency>
@@ -25,6 +25,19 @@ Add it to your maven pom.xml:
     compile group: 'com.grack', name: 'nanojson', version: '1.4'
 
 ... or just drop the files directly into your project!
+
+
+**And then**, in your *module-info.java* file, add *requires com.grack.nanojson;* to your list of required modules. For example:
+```
+module mypackage.mymodule {
+	exports mypackage.mymodule;
+
+	requires com.grack.nanojson;
+
+	requires java.desktop;
+	requires java.logging;
+}
+```
 
 ## Features
 
