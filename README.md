@@ -33,9 +33,6 @@ module mypackage.mymodule {
 	exports mypackage.mymodule;
 
 	requires com.grack.nanojson;
-
-	requires java.desktop;
-	requires java.logging;
 }
 ```
 
